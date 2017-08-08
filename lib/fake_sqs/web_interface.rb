@@ -7,6 +7,10 @@ module FakeSQS
       use FakeSQS::CatchErrors, response: ErrorResponse
     end
 
+    before do
+      content_type 'text/xml'
+    end
+
     helpers do
 
       def action
