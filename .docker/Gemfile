@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+# Note: We use a forked copy of fake_sns to add host resolving
+# functionality.  Will switch back to standard gem if author accepts
+# pull request
+gem 'thin'
+# Using a pocket repo here because we had to update the api response to include
+# XML instructions to force the AWS SQS agent to parse the XML response.
+# https://github.com/Pocket/fake_sqs/commit/fc39ee797ad157ea0726d7d16a94a3b455b5e30a
+gem 'fake_sqs', git: 'https://github.com/pocket/fake_sqs.git'
